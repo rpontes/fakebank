@@ -4,6 +4,11 @@
 ## Getting Started
 This application is structured as follows:
 
+## Requiriments
+
+* Ruby
+* Yarn - [Install](https://yarnpkg.com/lang/en/docs/install/)
+
 ### Models
 * **Account**: bank account from a client;
 * **Trader**: where transfers will save amount
@@ -30,7 +35,9 @@ After that you need install all dependencies, create and populate database.
 
 ```sh
   bundle install
+  yarn install
   rails db:create
+  rails db:migrate
   rails db:seed
 ```
 
