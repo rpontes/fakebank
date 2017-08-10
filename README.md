@@ -4,11 +4,6 @@
 ## Getting Started
 This application is structured as follows:
 
-## Requiriments
-
-* Ruby
-* Yarn - [Install](https://yarnpkg.com/lang/en/docs/install/)
-
 ### Models
 * **Account**: bank account from a client;
 * **Trader**: where transfers will save amount
@@ -21,6 +16,10 @@ This application is structured as follows:
 
 * **TransferMoneyService**: responsible for create trades between accounts
   * **transfer**: create two trades, one who sent money and another who receive money
+
+## Requiriments
+  * Ruby
+  * Yarn - [Install](https://yarnpkg.com/lang/en/docs/install/)
 
 ## Development setup
 To start a develop on this project, follow this steps:
