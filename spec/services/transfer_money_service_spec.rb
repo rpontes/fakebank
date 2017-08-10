@@ -42,5 +42,11 @@ describe TransferMoneyService do
 
       expect(response).to be_falsy
     end
+
+    it 'return false when send amount not numericality' do
+      response = described_class.new(@account.id, @account.id, 'x').transfer
+
+      expect(response).to be_falsy
+    end
   end
 end

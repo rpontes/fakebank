@@ -12,12 +12,12 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Fake Bank</a>
+          <%= link_to 'Fake Bank', root_path, class: 'navbar-brand' %>
         </div>
       </div>
     </nav>
 
-    <%= render partial: 'shared/flash_messages', flash: flash %> 
+    <%= render partial: 'shared/flash_messages', flash: flash %>
 
     <div class="container">
       <%= yield %>
