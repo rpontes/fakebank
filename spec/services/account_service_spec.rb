@@ -24,5 +24,13 @@ describe AccountService do
 
       expect(response).to be_falsy
     end
+
+    it "return zeros when account doesn't have trades" do
+      account = Account.create
+
+      response = described_class.new(account.id).balance
+
+      expect(response).to eq(0.0)
+    end
   end
 end

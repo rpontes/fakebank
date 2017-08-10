@@ -17,6 +17,6 @@ class AccountService
   def balance
     return false unless Account.exists?(@account_id)
 
-    Trade.where(account_id: @account_id).pluck(:amount).reduce(:+)
+    Trade.where(account_id: @account_id).pluck(:amount).reduce(:+) || 0.0
   end
 end
