@@ -1,26 +1,21 @@
 # FakeBank
-> Application created a Fake Bank to get Balance and make transfers between accounts.
+> Fake Bank is application to manage banks accounts, getting balance and transfers money between clients.
 
 ## Getting Started
-Para contribuir com esse projeto,
-é necessesário seguir os seguintes passos:
-
-## About
-
-This application contains two models:
+This application is structured as follows:
 
 ### Models
-* Account: bank account from a client;
-* Trader: where transfers will save amount
+* **Account**: bank account from a client;
+* **Trader**: where transfers will save amount
 
 ### Services
 
-* AccountService: responsible for manage a account
+* **AccountService**: responsible for manage a account
   * **balance**: sum and reduce all amounts from account traders
 
-* TransferMoneyService: responsible for create traders between accounts
-  * **transfer**: create two traders, one to who send money and another who receive money
 
+* **TransferMoneyService**: responsible for create traders between accounts
+  * **transfer**: create two traders, one to who send money and another who receive money
 
 ## Development setup
 To start a develop on this project, follow this steps:
@@ -47,8 +42,6 @@ And run localy
 ```
 
 ## Running the tests
-To run tests on application:
-
 ```sh
   rspec
 ```
