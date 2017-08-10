@@ -38,7 +38,8 @@ After that you need install all dependencies, create and populate database.
 And run locally
 
 ```sh
-  rails s
+  rails s -b 0.0.0.0 thin
+  open http://127.0.0.1:3000
 ```
 
 ## Running the tests

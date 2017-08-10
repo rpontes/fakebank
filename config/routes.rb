@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'traders#index'
+  root 'trades#index'
 
   get '/accounts/balance', to: 'accounts#balance'
   post '/transfer_money', to: 'transfer_money#create'

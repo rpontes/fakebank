@@ -8,6 +8,6 @@ class AccountsController < ApplicationController
     return unless @balance == false
 
     flash[:error] = t('accounts.balance.not_exist')
-    redirect_to traders_path
+    redirect_to trades_path
   end
 end
