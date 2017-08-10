@@ -11,11 +11,11 @@ This application is structured as follows:
 ### Services
 
 * **AccountService**: responsible for manage a account
-  * **balance**: sum and reduce all amounts from account traders
+  * **balance**: sum and reduce all amounts from account trades
 
 
-* **TransferMoneyService**: responsible for create traders between accounts
-  * **transfer**: create two traders, one to who send money and another who receive money
+* **TransferMoneyService**: responsible for create trades between accounts
+  * **transfer**: create two trades, one who sent money and another who receive money
 
 ## Development setup
 To start a develop on this project, follow this steps:
