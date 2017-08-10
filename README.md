@@ -35,7 +35,7 @@ After that you need install all dependencies, create and populate database.
 ```
 
 ### Run
-And run localy
+And run locally
 
 ```sh
   rails s
