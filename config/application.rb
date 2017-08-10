@@ -27,5 +27,9 @@ module Fakebank
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.time_zone = 'Brasilia'
+    config.i18n.default_locale = :'pt-BR'
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
   end
 end

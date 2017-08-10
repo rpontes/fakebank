@@ -1,0 +1,69 @@
+<div class="row">
+  <h4><%= t('.get_balance') %></h4>
+
+  <%= form_tag accounts_balance_path, method: :get,
+               id: 'get_balance', class: 'form-inline' do %>
+    <div class="form-group">
+      <%= label_tag :account_id, t('.account') %>
+      <%= text_field_tag :account_id, params[:account_id],
+                         class: 'form-control' %>
+    </div>
+
+    <%= submit_tag t('.get_balance'), class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<div class="row">
+  <h4><%= t('.transfer') %></h4>
+
+  <%= form_tag transfer_money_path, method: 'POST',
+               id: 'transfer_money', class: 'form-inline' do %>
+    <div class="form-group">
+      <%= label_tag :source_account_id, t('.source_account_id') %>
+      <%= text_field_tag :source_account_id, params[:source_account_id],
+                         class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :destination_account_id, t('.destination_account_id') %>
+      <%= text_field_tag :destination_account_id, params[:destination_account_id],
+                         class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :amount, t('.amount') %>
+      <%= text_field_tag :amount, params[:amount], class: 'form-control' %>
+    </div>
+
+    <%= submit_tag t('.transfer'), class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<hr/>
+
+<h3><%= t('.title') %></h3>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="col-md-4"><%= t('.created_at') %></th>
+      <th class="col-md-4"><%= t('.account_id') %></th>
+      <th class="col-md-4"><%= t('.amount') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @traders.each do |trade| %>
+      <tr>
+        <td class="col-md-4">
+          <%= I18n.l(trade.created_at, format: :short) %>
+        </td>
+        <td class="col-md-4">
+          <%= trade.account_id %>
+        </td>
+        <td class="col-md-4">
+          <%= number_to_currency(trade.amount) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

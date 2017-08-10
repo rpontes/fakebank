@@ -1,0 +1,4 @@
+<h2><%= t('.account', account_id: params[:account_id]) %></h2>
+<h3><%= t('.title') %> <small><%= number_to_currency(@balance) %></small></h3>
+
+<%= link_to t('actions.back'), root_path, class: 'btn btn-primary' %>

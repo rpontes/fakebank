@@ -1,24 +1,58 @@
-# README
+# FakeBank
+> Application created a Fake Bank to get Balance and make transfers between accounts.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
+Para contribuir com esse projeto,
+é necessesário seguir os seguintes passos:
 
-Things you may want to cover:
+## About
 
-* Ruby version
+This application contains two models:
 
-* System dependencies
+### Models
+* Account: bank account from a client;
+* Trader: where transfers will save amount
 
-* Configuration
+### Services
 
-* Database creation
+* AccountService: responsible for manage a account
+  * **balance**: sum and reduce all amounts from account traders
 
-* Database initialization
+* TransferMoneyService: responsible for create traders between accounts
+  * **transfer**: create two traders, one to who send money and another who receive money
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Development setup
+To start a develop on this project, follow this steps:
 
-* Deployment instructions
+### Install
+```sh
+  git clone https://github.com/rpontes/fakebank
+  cd fakebank
+```
 
-* ...
+After that you need install all dependencies, create and populate database.
+
+```sh
+  bundle install
+  rails db:create
+  rails db:seed
+```
+
+### Run
+And run localy
+
+```sh
+  rails s
+```
+
+## Running the tests
+To run tests on application:
+
+```sh
+  rspec
+```
+
+
+## License
+MIT © [Ricardo Pontes](https://github.com/rpontes)

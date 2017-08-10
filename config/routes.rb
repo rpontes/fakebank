@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'traders#index'
+
+  get '/accounts/balance', to: 'accounts#balance'
+  post '/transfer_money', to: 'transfer_money#create'
+
+  resources :traders, only: :index
 end

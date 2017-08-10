@@ -1,0 +1,23 @@
+pt-BR:
+  traders:
+    index:
+      title: Transações
+      created_at: Criado em
+      account_id: Conta
+      amount: Valor
+      get_balance: Consulta Saldo
+      account: Conta
+      transfer: Transferir
+      source_account_id: Origem
+      destination_account_id: Destino
+      amount: Valor
+  accounts:
+    balance:
+      account: 'Conta %{account_id}'
+      title: 'Saldo atual:'
+      not_exist: Conta não existe!
+  actions:
+    back: Voltar
+  transfer_money:
+    success: Transferencia realizadas com sucesso!
+    error: Problemas ao tentar transferir!
